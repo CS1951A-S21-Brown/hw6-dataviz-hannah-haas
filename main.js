@@ -259,6 +259,7 @@ function createGraph3(data, rating){
 
   svg3.append("text")
       .attr("transform", `translate(${graph_3_width / 2}, ${(graph_3_height - margin.top - margin.bottom) + 115})`)
+      .style("text-anchor", "middle")
       .style("font-size", 15)
       .text("*Only includes popular actors (actors that have been in at least 6 movies) ");
 
