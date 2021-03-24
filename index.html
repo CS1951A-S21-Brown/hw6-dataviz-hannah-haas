@@ -15,13 +15,154 @@
     <!--  We included a basic HTML structure for the 3 graphs here. Feel free to change this if you'd like  -->
     <div class="row">
         <div class="col-lg-6">
-            <div id="graph1"></div>
+            <div id="graph1" ></div>
+          </br>
+          </br>
             <div id="graph2"></div><br/>
         </div>
         <div class="col-lg-6">
-            <div id="graph3"></div>
+          <div style="margin-left:45%;">
+            <button type="button" class="btn btn-info" onclick="setRating('R')">R</button>
+            <button type="button" class="btn btn-info" onclick="setRating('PG-13')">PG-13</button>
+            <button type="button" class="btn btn-info" onclick="setRating('PG')">PG</button>
+            <button type="button" class="btn btn-info" onclick="setRating('G')">G</button>
+            <button type="button" class="btn btn-info" onclick="setRating('NR')">NR</button>
+          </div>
+          <div id="graph3"></div>
         </div>
     </div>
+
+    <h2 style="margin-left:20px; margin-right: 20px"> Written Questions </h2>
+
+    <p style="margin-left:20px; margin-right: 20px">
+      <strong> 1. Describe how your dashboard answers the questions presented. You don't
+      have to address every question directly, but should at a high level address
+      the main questions. (10 points) </strong>
+    </p>
+
+    <p style="margin-left:20px; margin-right: 20px">
+      My dashboard effectively answers all of the questions presented. My first
+      graph is a bar graph. The x axis is the different genres and then the y
+      axis is the number of titles (movies/tv shows). Therefore, it clearly shows
+      the number of titles per genre on Netflix. My second graph is a line graph.
+      The x axis is the year and the y axis is the average runtime of movies.
+      This graph shows the average runtime of movies by release year over time.
+      My third graph is a flow chart, specifically a network graph. Each node in
+      the graph represents an actor. Specifically, it is a popular actor - one
+      that has been in at least 6 movies. Each link between the nodes represents
+      a movie that both connecting nodes have acted in. Additionally, this graph
+      is broken down by rating. On default, it only shows the connections between
+      actors in R rated movies. Additionally, the user has the choice of ratings
+      R, PG-13, PG, G, and NR. I decided to limit it by ratings and also to popular
+      actors to de-clutter the graph and to make the information more relevant.
+      With showing all ratings together there are a lot of separate clusters because
+      the actors don't cross ratings a lot - therefore by showing it broken down
+      by ratings, you get more meaningful information. Therefore, this graph is
+      easily able to show information about the casts and answer question #3.
+    </p>
+
+    <p style="margin-left:20px; margin-right: 20px">
+      <strong> 2. List 3 reasons why D3 was helpful and improved your
+        visualization (6 points) </strong>
+    </p>
+
+    <p style="margin-left:20px; margin-right: 20px">
+      D3 was definitely helpful and improved my visualization for a variety of
+      reasons. Firstly, it is incredibly easy to use to make simple graphs. You
+      simply have to compile the data and pass them in according to the D3
+      documentation. Secondly, there is a lot of built in functionality that
+      you do not need to worry about. Typically, making a flow type graph would
+      be incredibly difficult and time consuming. However, with D3, you simply
+      provide the nodes and links and it produces the graph on the backend.
+      Finally, it offers a lot of personalization for simple graphs. You can
+      add colors, axis, lables, tooltips, and more. This enables users to make
+      beautiful graphs!
+    </p>
+
+    <p style="margin-left:20px; margin-right: 20px">
+      <strong> 3. List 3 reasons why D3 would not be the best tool for creating
+        a visualization (6 points) </strong>
+    </p>
+
+    <p style="margin-left:20px; margin-right: 20px">
+       Despite the many benefits to D3 as I listed above, there are also some
+       downsides to D3. Firstly, some of the documentation is uncompleted or
+       confusing. Initially, I was planning on creating a Map graph for the
+       Netflix dataset, however the documentation was confusing, assumed a lot
+       of knowledge, and after a while I gave up. With this ineffective documentation,
+       it's not always the best tool for creating visualizations. Secondly, I
+       found D3 to be quite slow sometimes, particularily with my flow graph.
+       While some of this may have been from my lack of efficiency, I researched
+       and discovered that D3 is approx 70+ KB and therefore causes websites to
+       load slower. Therefore, if speed is important, D3 might not be the best
+       tool. Finally, it is a lot more complex and difficult to use for non-simple
+       graphs. On the documentation there is pretty much no explanation on how
+       to use D3 so I felt that it was very much look at the D3 documentation
+       examples and the lab examples and try substitute your information to get
+       it to work. Therefore, I sometimes felt that working with D3 is like trial
+       and error. While this worked for the more trivial graphs, for more complex
+       graphs I felt like the learning curve was very high.
+    </p>
+
+
+    <h2 style="margin-left:20px; margin-right: 20px"> Accessible Data Visualization </h2>
+
+
+    <p style="margin-left:20px; margin-right: 20px">
+      <strong> Evaluate the accessibility of your dashboard based on the readings in the
+      “Before you begin” section. What kinds of users might find this dashboard
+       accessible and who might have more difficulty? What additional actions
+       might you take to make this dashboard more accessible to all audiences?
+       Your response should refer to at least one of the readings and be about
+       1 paragraph. </strong>
+    </p>
+
+    <p style="margin-left:20px; margin-right: 20px">
+      Based on the readings, my evaluation of the accessibility of my dashboard
+      is quite poor. From the Medium reading, a lot of their points made don't
+      apply to my dashboard - I don't use sound, color to distinguish points,
+      animations, metaphors or symbols. Therefore, my dashboard isn't
+      inaccessible for these reasons. My dashboard is, however, not fully
+      accessible to individuals with a visual impairment. While my dashboard does
+      use SVG and there is a better experience for screen readers (as explained
+      in the Betterment article), there are several actions I could take to make
+      it less difficult. I could provide a summary for each of my graphs that is
+      readable by screen reader, enabling individuals to get a quick understanding
+      of the data. Secondly, I could provide the raw data that I use in my graphs.
+      To do this, I  could write to csv files when I calculate the data for my
+      graphs and then link the files on my website. These actions would make my
+      dashboard more accessible to blind individuals and individuals with visual
+      impairments.
+
+     </p>
+
+    <p style="margin-left:20px; margin-right: 20px">
+      <strong> Reflect on the stages of your design and implementation process when you
+      could have taken steps to make your dashboard more accessible to all
+      audiences. What are some factors that kept you from taking these steps?
+      (a few sentences) </strong>
+    </p>
+
+    <p style="margin-left:20px; margin-right: 20px">
+      When initially designing my dashboard I chose the graphs that made the
+      most sense for the data and so that I could sufficiently complete the
+      project objectives. Therefore, I chose a flow chart with a hoverable
+      element. This is very inaccessible and therefore in the design process I
+      could have taken steps to think of a better graph type to convey the
+      same information. However, the factor of that it is required to have a
+      hoverable element for the assignment kept me from being able to make this
+      part accessible. Furthermore, in the implementation stage I could have
+      taken the steps to include csv files with the graph's data and added
+      graph summaries. Some of the factors that preventing me from taking these
+      steps are laziness, time constraints, and lack of necessity. These are all
+      terrible factors, but as a busy college student I felt that I didn't have
+      the time to spend to make it as accessible as I could. However, in a non
+      college setting, I think that I would try to prioritize accessibility and make
+      time for it, and in that sense I don't think there are any valid factors
+      that would prevent me from taking the steps.
+
+    </p>
+
     <!--Feel free to add more JavaScript files as needed-->
     <script type="text/javascript" src="main.js"></script>
 </body>
